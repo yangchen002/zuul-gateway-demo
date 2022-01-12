@@ -1,0 +1,20 @@
+zuul:
+  routes:
+    jiuwanzi:
+      url: http://localhost:8090
+      path: /jiuwanzi/**
+server:
+  port: 8080
+
+spring:
+  jackson:
+    default-property-inclusion: always
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.138:3306/hotel?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  jpa:
+    show-sql: true
